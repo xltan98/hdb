@@ -1,25 +1,25 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[11]:
 
 
 from flask import Flask
 
 
-# In[2]:
+# In[12]:
 
 
 import joblib
 
 
-# In[3]:
+# In[13]:
 
 
 app = Flask(__name__)
 
 
-# In[4]:
+# In[14]:
 
 
 from flask import request, render_template
@@ -36,9 +36,9 @@ def index():
         pred = model1.predict([[Year,floor_area_sqm,lease_commence_date,Remaining_lease_updated]])
         s = f""" Your requested property is: 
             Year: {Year}
-            Floor Area: {floor_area_sqm}
-            Lease Commense Date: {lease_commence_date} 
-            Remaining Lease: {Remaining_lease_updated}
+            floor_area_sqm: {floor_area_sqm}
+            Floor Area (sqm): {floor_area}
+            lease_commence_date: {lease_commence_date} 
             The property is valued at {str(pred[0])} """
         
         return(render_template("index.html",results="s"))
@@ -46,7 +46,7 @@ def index():
         return(render_template("index.html",results="Loading..."))
 
 
-# In[ ]:
+# In[15]:
 
 
 if __name__ == "__main__":

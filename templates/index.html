@@ -60,11 +60,9 @@
             }
         </style>
         <br>
-
-            <div class="container">
                 <form action="/" method="POST">
                     <div style="margin-bottom: 20px;">
-                        <span class="input-title">Floor Area (sqm)</span> 
+                        <span class="input-title">Floor Area (sqm)?</span> 
                         <div class="select-search">
                             <div class="select-search__value">
                                 <input tabindex="0" placeholder="Floor Area (sqm)" type = "number" step = "1" name="floor_area_sqm" value>
@@ -76,40 +74,31 @@
                         <span class="input-title">Lease Commencement Year</span> 
                         <div class="select-search">
                             <div class="select-search__value">
-                                <input tabindex="0" placeholder="Lease Commencement Date" type = "number" step = "1" name="lease_commence_date" value>
+                                <input tabindex="0" placeholder="lease_commence_date" type = "number" step = "1" name="lease_commence_date" value>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <span class="input-title">Year</span> 
-                        <div class="select-search">
-                            <div class="select-search__value">
-                                <input tabindex="0" placeholder="Year" type = "number" step = "1" name="Year" value>
-                            </div>
+                <div style="margin-bottom: 20px;">
+                    <span class="input-title">Year</span> 
+                    <div class="select-search">
+                        <div class="select-search__value">
+                            <input tabindex="0" placeholder="Year" type = "number" step = "1" name="Year" value>
                         </div>
                     </div>
+                </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <span class="input-title">Remaining lease</span> 
-                        <div class="select-search">
-                            <div class="select-search__value">
-                                <input tabindex="0" placeholder="Remaining Lease" type = "number" step = "1" name="Remaining_lease_updated" value>
-                            </div>
+                <div style="margin-bottom: 20px;">
+                    <span class="input-title">Remaining lease</span> 
+                    <div class="select-search">
+                        <div class="select-search__value">
+                            <input tabindex="0" placeholder="Remaining_lease_updated" type = "number" step = "1" name="Remaining_lease_updated" value>
                         </div>
                     </div>
+                </div>
 
-                    <p><input type = "submit" value = "Enter"></p>
-                    <style type="text/css">
-                        p {
-                            text-align: center;
-                            color: #fffaf1;
-                            font-family: Calibri;
-                        }
-                    </style>
-                </form>
-        
-                <p>Your property is valued at {{result}}</p>
+                <p><input type = "submit" value = "Enter"></p>
                 <style type="text/css">
                     p {
                         text-align: center;
@@ -117,7 +106,15 @@
                         font-family: Calibri;
                     }
                 </style>
-
-            </div>
+            </form>
+            <p>Your property is valued at {{results}}</p>
+            <style type="text/css">
+                p {
+                    text-align: center;
+                    color: #fffaf1;
+                    font-family: Calibri;
+                }
+            </style>
+        </div>
     </body>
 </html>
